@@ -1,0 +1,38 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="character.name">
+      </div>
+      <div class="mb-3">
+        <label for="status" class="form-label">Status</label>
+        <input type="text" class="form-control" id="status" required [(ngModel)]="character.status">
+      </div>
+      <div class="mb-3">
+        <label for="species" class="form-label">Species</label>
+        <input type="text" class="form-control" id="species" required [(ngModel)]="character.species">
+      </div>
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <input type="text" class="form-control" id="gender" required [(ngModel)]="character.gender">
+      </div>
+      <div class="mb-3">
+        <label for="origin" class="form-label">Origin</label>
+        <input type="text" class="form-control" id="origin" required [(ngModel)]="character.origin">
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>
+        <input type="text" class="form-control" id="location" required [(ngModel)]="character.location">
+      </div>
+      <button type="submit" class="btn btn-primary" (click)="saveCharacter()">Submit</button>
+    </div>
+
+    <div *ngIf="submitted">
+        <h4>Character creado correctamente</h4>
+        <button class="btn btn-success" (click)="newCharacter()">Add</button>
+    </div>
+
+  </div>
+</div>
+
